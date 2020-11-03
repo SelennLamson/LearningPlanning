@@ -85,12 +85,12 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>$(ProjectDir)Sources;C:\DevLibraries\SDL2\include;C:\DevLibraries\SDL2_image\include;$(SolutionDir)LearningPlanning/Sources;$(SolutionDir)LearningPlanning;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\SDL2_image\include;$(SolutionDir)ThirdParty\SDL2\include;$(ProjectDir)Sources;$(SolutionDir)LearningPlanning/Sources;$(SolutionDir)LearningPlanning;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>C:\DevLibraries\SDL2_image\lib\x64;C:\DevLibraries\SDL2\lib\x64;$(SolutionDir)x64/Tests;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)ThirdParty\SDL2\lib\x64;$(SolutionDir)ThirdParty\SDL2_image\lib\x64;$(SolutionDir)x64/Tests;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;LearningPlanning.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
