@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Sources\test.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Logic\DomainTest.cpp">
+      <Filter>Fichiers sources\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\LearningAgentTest.cpp">
+      <Filter>Fichiers sources\Agents</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{c8221eb2-802a-463a-8062-e225920183ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de données">
+      <UniqueIdentifier>{0ce3cc6b-86af-4cbb-b1d2-66ee7f186a09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Logic">
+      <UniqueIdentifier>{ca192239-998c-42f8-aeb0-844ced467d8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Agents">
+      <UniqueIdentifier>{9a7cb352-7a29-4b3e-a24a-77055bead300}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\simple_blocksworld_inst1.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\simple_blocksworld.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

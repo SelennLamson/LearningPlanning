@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Tests|Win32">
+      <Configuration>Tests</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Tests|x64">
+      <Configuration>Tests</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{E3FC5B83-2C63-42F4-870F-96AC1C599850}</ProjectGuid>
+    <RootNamespace>LearningPlanning</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tests|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tests|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Tests|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Tests|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tests|Win32'">
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tests|x64'">
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\DevLibraries\SDL2_image-2.0.1\include;C:\DevLibraries\SDL2\include;$(ProjectDir)/Sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\DevLibraries\SDL2_image-2.0.1\lib\x64;C:\DevLibraries\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Tests|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\DevLibraries\SDL2_image-2.0.1\include;C:\DevLibraries\SDL2\include;$(ProjectDir)/Sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\DevLibraries\SDL2_image-2.0.1\lib\x64;C:\DevLibraries\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\DevLibraries\SDL2_image\include;C:\DevLibraries\SDL2\include;$(ProjectDir)/Sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\DevLibraries\SDL2_image\lib\x64;C:\DevLibraries\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Tests|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\DevLibraries\SDL2_image\include;C:\DevLibraries\SDL2\include;$(ProjectDir)/Sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\DevLibraries\SDL2_image-2.0.1\lib\x64;C:\DevLibraries\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\DevLibraries\SDL2_image-2.0.1\include;C:\DevLibraries\SDL2\include;$(ProjectDir)/Sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\DevLibraries\SDL2_image-2.0.1\lib\x64;C:\DevLibraries\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\DevLibraries\SDL2_image\include;C:\DevLibraries\SDL2\include;$(ProjectDir)/Sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\DevLibraries\SDL2_image\lib\x64;C:\DevLibraries\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="Resources\block.png" />
+    <Image Include="Resources\box.png" />
+    <Image Include="Resources\cell.png" />
+    <Image Include="Resources\light.png" />
+    <Image Include="Resources\paint.png" />
+    <Image Include="Resources\plug.png" />
+    <Image Include="Resources\robot.png" />
+    <Image Include="Resources\warehouse.png" />
+    <Image Include="Resources\truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\Agents\Agent.h" />
+    <ClInclude Include="Sources\Agents\AStarAgent.h" />
+    <ClInclude Include="Sources\Agents\DataGeneratorAgent.h" />
+    <ClInclude Include="Sources\Agents\FFAgent.h" />
+    <ClInclude Include="Sources\Agents\LearningAgent\ActionRule.h" />
+    <ClInclude Include="Sources\Agents\LearningAgent\BayesianExplorer.h" />
+    <ClInclude Include="Sources\Agents\LearningAgent\ExplorerAgentBase.h" />
+    <ClInclude Include="Sources\Agents\LearningAgent\IRALeExplorer.h" />
+    <ClInclude Include="Sources\Agents\LearningAgent\LearningAgent.h" />
+    <ClInclude Include="Sources\Agents\ManualAgent.h" />
+    <ClInclude Include="Sources\Agents\PartialOrderPlanner\PopAgent.h" />
+    <ClInclude Include="Sources\Agents\PartialOrderPlanner\PopAgentMultivariate.h" />
+    <ClInclude Include="Sources\Agents\RandomExploreAgent.h" />
+    <ClInclude Include="Sources\Agents\Strips\StripsAgent.h" />
+    <ClInclude Include="Sources\cJSON.h" />
+    <ClInclude Include="Sources\ConfigReader.h" />
+    <ClInclude Include="Sources\Logic\Domain.h" />
+    <ClInclude Include="Sources\Logic\DomainTester.h" />
+    <ClInclude Include="Sources\Logic\JSON_Parsing.h" />
+    <ClInclude Include="Sources\Logic\LogicEngine.h" />
+    <ClInclude Include="Sources\Logic\PDDL_Parsing.h" />
+    <ClInclude Include="Sources\Logic\RandomStateGenerator.h" />
+    <ClInclude Include="Sources\Render\BlocksWorldRenderer.h" />
+    <ClInclude Include="Sources\Render\ComplexWorldRenderer.h" />
+    <ClInclude Include="Sources\Render\DomainRenderer.h" />
+    <ClInclude Include="Sources\Render\LogisticsRenderer.h" />
+    <ClInclude Include="Sources\Render\SokobanRenderer.h" />
+    <ClInclude Include="Sources\SDL_FontCache.h" />
+    <ClInclude Include="Sources\Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\Agents\Agent.cpp" />
+    <ClCompile Include="Sources\Agents\AStarAgent.cpp" />
+    <ClCompile Include="Sources\Agents\DataGeneratorAgent.cpp" />
+    <ClCompile Include="Sources\Agents\FFAgent.cpp" />
+    <ClCompile Include="Sources\Agents\LearningAgent\ActionRule.cpp" />
+    <ClCompile Include="Sources\Agents\LearningAgent\BayesianExplorer.cpp" />
+    <ClCompile Include="Sources\Agents\LearningAgent\IRALeExplorer.cpp" />
+    <ClCompile Include="Sources\Agents\LearningAgent\LearningAgent.cpp" />
+    <ClCompile Include="Sources\Agents\ManualAgent.cpp" />
+    <ClCompile Include="Sources\Agents\PartialOrderPlanner\PopAgent.cpp" />
+    <ClCompile Include="Sources\Agents\PartialOrderPlanner\PopAgentMultivariate.cpp" />
+    <ClCompile Include="Sources\Agents\RandomExploreAgent.cpp" />
+    <ClCompile Include="Sources\Agents\Strips\StripsAgent.cpp" />
+    <ClCompile Include="Sources\cJSON.c" />
+    <ClCompile Include="Sources\ConfigReader.cpp" />
+    <ClCompile Include="Sources\Logic\Domain.cpp" />
+    <ClCompile Include="Sources\Logic\DomainTester.cpp" />
+    <ClCompile Include="Sources\Logic\LogicEngine.cpp" />
+    <ClCompile Include="Sources\Logic\RandomStateGenerator.cpp" />
+    <ClCompile Include="Sources\main.cpp" />
+    <ClCompile Include="Sources\Render\BlocksWorldRenderer.cpp" />
+    <ClCompile Include="Sources\Render\ComplexWorldRenderer.cpp" />
+    <ClCompile Include="Sources\Render\LogisticsRenderer.cpp" />
+    <ClCompile Include="Sources\Render\SokobanRenderer.cpp" />
+    <ClCompile Include="Sources\SDL_FontCache.c" />
+    <ClCompile Include="Sources\Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.json" />
+    <None Include="cpp.hint" />
+    <None Include="Data\blocksworld.json" />
+    <None Include="Data\blocksworld_inst1.json" />
+    <None Include="Data\blocksworld_inst2.json" />
+    <None Include="Data\blocksworld_large.json" />
+    <None Include="Data\blocksworld_simple1A.json" />
+    <None Include="Data\blocksworld_simple1B.json" />
+    <None Include="Data\blocksworld_simple2.json" />
+    <None Include="Data\blocksworld_simple3.json" />
+    <None Include="Data\colorblocksworld.json" />
+    <None Include="Data\colorblocksworld_inst1.json" />
+    <None Include="Data\colorblocksworld_inst2.json" />
+    <None Include="Data\colorblockwold_revertible.json" />
+    <None Include="Data\complex.json" />
+    <None Include="Data\complex_inst1.json" />
+    <None Include="Data\complex_inst2.json" />
+    <None Include="Data\complex_inst3.json" />
+    <None Include="Data\complex_lessvars.json" />
+    <None Include="Data\logistics.json" />
+    <None Include="Data\logistics_222.json" />
+    <None Include="Data\logistics_444.json" />
+    <None Include="Data\sokoban.json" />
+    <None Include="Data\sokoban_inst1.json" />
+    <None Include="Sources\Agents\PartialOrderPlanner\AIMA_POP_implem.py" />
+    <Text Include="Data\complex_inst2_headstart.txt" />
+    <Text Include="Sources\Agents\Strips\pyStrips.py">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Tests|x64'">false</ExcludedFromBuild>
+    </Text>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Data_4complex_3inst1_1json__JsonSchema="http://schemastore.org/api/json/catalog.json" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

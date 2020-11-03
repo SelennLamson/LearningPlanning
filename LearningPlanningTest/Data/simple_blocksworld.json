@@ -1,0 +1,27 @@
+{
+	"predicates": [
+		{ "name": "clear", "arity": 1 },
+		{ "name": "block", "arity": 1 },
+		{ "name": "on", "arity": 2 }
+	],
+	"actions": [
+		{
+			"name": "move",
+			"parameters": [ "X", "Y", "Z" ],
+			"precondition": [
+        [ "block", "X" ],
+        [ "clear", "X" ],
+        [ "clear", "Y" ],
+        [ "on", "X", "Z"]
+			],
+      "add": [
+        [ "clear", "Z" ],
+        [ "on", "X", "Y" ]
+      ],
+      "del": [
+        [ "clear", "Y" ],
+        [ "on", "X", "Z" ]
+      ]
+		}
+	]
+}

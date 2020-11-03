@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Logic">
+      <UniqueIdentifier>{403d37d4-b40a-45d4-bd17-d3361408f13c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Render">
+      <UniqueIdentifier>{e84827b4-ab37-4996-bd19-020429ab9522}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Logic">
+      <UniqueIdentifier>{526feca1-e52c-4d24-90ec-9b91ebc9d499}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Render">
+      <UniqueIdentifier>{95c68c4d-b500-4487-8963-bc79760c7b4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Agents">
+      <UniqueIdentifier>{bd9bf75f-efd3-4e76-a072-0001ca873bc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Agents">
+      <UniqueIdentifier>{3efb93bb-e867-46a1-91ae-e7de2f451543}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de données">
+      <UniqueIdentifier>{14d11e71-446b-4030-afb5-f157ba623d51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Agents\LearningAgent">
+      <UniqueIdentifier>{3c736417-2abe-43db-9da7-43c4d0c62692}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Agents\LearningAgent">
+      <UniqueIdentifier>{ca17dc44-e817-4936-877a-08ace2e2db0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Agents\Strips">
+      <UniqueIdentifier>{ad088caa-70f1-4539-9e26-30c6530c92ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Agents\Strips">
+      <UniqueIdentifier>{7e18eb0b-73b1-4122-8ee3-5daeda18a783}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Agents\PartialOrderPlanner">
+      <UniqueIdentifier>{da3b3d92-2962-46c1-8d41-63ac3a6ab73f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Agents\PartialOrderPlanner">
+      <UniqueIdentifier>{7f55ec38-e52c-4344-8531-1d9dd003ada0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\block.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Resources\box.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Resources\truck.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Resources\warehouse.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Resources\light.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Resources\paint.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Resources\plug.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Resources\robot.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Resources\cell.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\SDL_FontCache.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Render\BlocksWorldRenderer.h">
+      <Filter>Fichiers d%27en-tête\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Render\DomainRenderer.h">
+      <Filter>Fichiers d%27en-tête\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Logic\Domain.h">
+      <Filter>Fichiers d%27en-tête\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Logic\LogicEngine.h">
+      <Filter>Fichiers d%27en-tête\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\Agent.h">
+      <Filter>Fichiers d%27en-tête\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\AStarAgent.h">
+      <Filter>Fichiers d%27en-tête\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\ManualAgent.h">
+      <Filter>Fichiers d%27en-tête\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Logic\PDDL_Parsing.h">
+      <Filter>Fichiers d%27en-tête\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Logic\JSON_Parsing.h">
+      <Filter>Fichiers d%27en-tête\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Utils.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\LearningAgent\ActionRule.h">
+      <Filter>Fichiers d%27en-tête\Agents\LearningAgent</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\LearningAgent\LearningAgent.h">
+      <Filter>Fichiers d%27en-tête\Agents\LearningAgent</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Render\LogisticsRenderer.h">
+      <Filter>Fichiers d%27en-tête\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\Strips\StripsAgent.h">
+      <Filter>Fichiers d%27en-tête\Agents\Strips</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\PartialOrderPlanner\PopAgent.h">
+      <Filter>Fichiers d%27en-tête\Agents\PartialOrderPlanner</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\PartialOrderPlanner\PopAgentMultivariate.h">
+      <Filter>Fichiers d%27en-tête\Agents\PartialOrderPlanner</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\RandomExploreAgent.h">
+      <Filter>Fichiers d%27en-tête\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\FFAgent.h">
+      <Filter>Fichiers d%27en-tête\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Render\ComplexWorldRenderer.h">
+      <Filter>Fichiers d%27en-tête\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Render\SokobanRenderer.h">
+      <Filter>Fichiers d%27en-tête\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\DataGeneratorAgent.h">
+      <Filter>Fichiers d%27en-tête\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Logic\DomainTester.h">
+      <Filter>Fichiers d%27en-tête\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Logic\RandomStateGenerator.h">
+      <Filter>Fichiers d%27en-tête\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\LearningAgent\ExplorerAgentBase.h">
+      <Filter>Fichiers d%27en-tête\Agents\LearningAgent</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\LearningAgent\BayesianExplorer.h">
+      <Filter>Fichiers d%27en-tête\Agents\LearningAgent</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Agents\LearningAgent\IRALeExplorer.h">
+      <Filter>Fichiers d%27en-tête\Agents\LearningAgent</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ConfigReader.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\cJSON.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\SDL_FontCache.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Render\BlocksWorldRenderer.cpp">
+      <Filter>Fichiers sources\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Logic\Domain.cpp">
+      <Filter>Fichiers sources\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Logic\LogicEngine.cpp">
+      <Filter>Fichiers sources\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\ManualAgent.cpp">
+      <Filter>Fichiers sources\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\Agent.cpp">
+      <Filter>Fichiers sources\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\AStarAgent.cpp">
+      <Filter>Fichiers sources\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\LearningAgent\ActionRule.cpp">
+      <Filter>Fichiers sources\Agents\LearningAgent</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\LearningAgent\LearningAgent.cpp">
+      <Filter>Fichiers sources\Agents\LearningAgent</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Render\LogisticsRenderer.cpp">
+      <Filter>Fichiers sources\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\Strips\StripsAgent.cpp">
+      <Filter>Fichiers sources\Agents\Strips</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Utils.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\PartialOrderPlanner\PopAgent.cpp">
+      <Filter>Fichiers sources\Agents\PartialOrderPlanner</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\PartialOrderPlanner\PopAgentMultivariate.cpp">
+      <Filter>Fichiers sources\Agents\PartialOrderPlanner</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\RandomExploreAgent.cpp">
+      <Filter>Fichiers sources\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\FFAgent.cpp">
+      <Filter>Fichiers sources\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Render\ComplexWorldRenderer.cpp">
+      <Filter>Fichiers sources\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Render\SokobanRenderer.cpp">
+      <Filter>Fichiers sources\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\DataGeneratorAgent.cpp">
+      <Filter>Fichiers sources\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Logic\DomainTester.cpp">
+      <Filter>Fichiers sources\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Logic\RandomStateGenerator.cpp">
+      <Filter>Fichiers sources\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\LearningAgent\BayesianExplorer.cpp">
+      <Filter>Fichiers sources\Agents\LearningAgent</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Agents\LearningAgent\IRALeExplorer.cpp">
+      <Filter>Fichiers sources\Agents\LearningAgent</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ConfigReader.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cJSON.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+    <None Include="Data\blocksworld.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\blocksworld_inst1.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\blocksworld_inst2.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\blocksworld_simple2.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\blocksworld_simple3.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\logistics_222.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\logistics.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\logistics_444.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Sources\Agents\PartialOrderPlanner\AIMA_POP_implem.py">
+      <Filter>Fichiers sources\Agents\PartialOrderPlanner</Filter>
+    </None>
+    <None Include="Data\blocksworld_simple1A.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\blocksworld_simple1B.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\blocksworld_large.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\complex.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="config.json" />
+    <None Include="Data\complex_inst1.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\complex_inst2.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\complex_lessvars.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\sokoban.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\sokoban_inst1.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\complex_inst3.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\colorblocksworld.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\colorblocksworld_inst1.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\colorblocksworld_inst2.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+    <None Include="Data\colorblockwold_revertible.json">
+      <Filter>Fichiers de données</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Sources\Agents\Strips\pyStrips.py">
+      <Filter>Fichiers sources\Agents\Strips</Filter>
+    </Text>
+    <Text Include="Data\complex_inst2_headstart.txt">
+      <Filter>Fichiers de données</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

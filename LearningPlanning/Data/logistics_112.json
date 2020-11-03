@@ -1,0 +1,15 @@
+{
+	"objects": [ "b1", "t1", "c1", "c2" ],
+	"init": [
+		[ "box", "b1" ],
+		[ "truck", "t1" ],
+		[ "city", "c1" ],
+		[ "city", "c2" ],
+		[ "boxin", "b1", "c1" ],
+		[ "truckin", "t1", "c2" ]
+	],
+	"goal": [
+		[ "boxin", "b1", "c2" ],
+		[ "truckin", "t1", "c1" ]
+	]
+}

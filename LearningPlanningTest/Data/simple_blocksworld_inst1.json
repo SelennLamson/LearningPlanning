@@ -1,0 +1,16 @@
+{
+	"objects": [ "a", "b", "f1", "f2", "f3" ],
+  "init": [
+    [ "block", "a" ],
+    [ "block", "b" ],
+    [ "on", "a", "b" ],
+    [ "on", "b", "f1" ],
+    [ "clear", "a" ],
+    [ "clear", "f2" ],
+    [ "clear", "f3" ]
+  ],
+  "goal": [
+    [ "on", "a", "b" ],
+    [ "on", "b", "f3" ]
+  ]
+}

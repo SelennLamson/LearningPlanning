@@ -1,0 +1,40 @@
+{
+	"objects": [
+		{
+			"name": "b1",
+			"type": "box"
+		},
+		{
+			"name": "b2",
+			"type": "box"
+		},
+		{
+			"name": "t1",
+			"type": "truck"
+		},
+		{
+			"name": "t2",
+			"type": "truck"
+		},
+		{
+			"name": "c1",
+			"type": "city"
+		},
+		{
+			"name": "c2",
+			"type": "city"
+		}
+	],
+	"init": [
+		[ "boxin", "b1", "c1" ],
+		[ "boxin", "b2", "c1" ],
+		[ "truckin", "t1", "c2" ],
+		[ "truckin", "t2", "c2" ]
+	],
+	"goal": [
+		[ "boxin", "b1", "c2" ],
+		[ "boxin", "b2", "c2" ],
+		[ "truckin", "t1", "c1" ],
+		[ "truckin", "t2", "c1" ]
+	]
+}

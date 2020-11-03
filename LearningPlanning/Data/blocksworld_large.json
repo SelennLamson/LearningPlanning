@@ -1,0 +1,138 @@
+{
+  "objects": [
+    {
+      "name": "a",
+      "type": "cube"
+    },
+    {
+      "name": "b",
+      "type": "cube"
+    },
+    {
+      "name": "c",
+      "type": "cube"
+    },
+    {
+      "name": "d",
+      "type": "cube"
+    },
+    {
+      "name": "e",
+      "type": "cube"
+    },
+    {
+      "name": "f",
+      "type": "cube"
+    },
+    {
+      "name": "g",
+      "type": "cube"
+    },
+    {
+      "name": "h",
+      "type": "cube"
+    },
+    {
+      "name": "i",
+      "type": "cube"
+    },
+    {
+      "name": "j",
+      "type": "cube"
+    },
+    {
+      "name": "k",
+      "type": "cube"
+    },
+    {
+      "name": "l",
+      "type": "cube"
+    },
+    {
+      "name": "m",
+      "type": "cube"
+    },
+    {
+      "name": "n",
+      "type": "cube"
+    },
+    {
+      "name": "o",
+      "type": "cube"
+    },
+    {
+      "name": "p",
+      "type": "cube"
+    },
+    {
+      "name": "q",
+      "type": "cube"
+    },
+    {
+      "name": "r",
+      "type": "cube"
+    }
+  ],
+  "init": [
+    [ "on-table", "a" ],
+    [ "on-table", "b" ],
+    [ "on-table", "c" ],
+    [ "on-table", "d" ],
+    [ "on-table", "e" ],
+    [ "on-table", "f" ],
+    [ "clear", "a" ],
+
+    [ "on", "g", "b" ],
+    [ "clear", "g" ],
+
+    [ "on", "h", "c" ],
+    [ "on", "i", "h" ],
+    [ "clear", "i" ],
+
+    [ "on", "j", "d" ],
+    [ "on", "k", "j" ],
+    [ "on", "l", "k" ],
+    [ "clear", "l" ],
+
+    [ "on", "m", "e" ],
+    [ "on", "n", "m" ],
+    [ "clear", "n" ],
+
+    [ "on", "o", "f" ],
+    [ "clear", "o" ],
+
+    [ "on-table", "p" ],
+    [ "clear", "p" ],
+    [ "on-table", "q" ],
+    [ "clear", "q" ],
+    [ "on-table", "r" ],
+    [ "clear", "r" ],
+
+    [ "arm-empty" ]
+  ],
+  "goal": [
+    [ "on", "a", "b" ],
+    [ "on", "b", "c" ],
+    [ "on-table", "c" ],
+
+    [ "on", "d", "e" ],
+    [ "on", "e", "f" ],
+    [ "on-table", "f" ],
+
+    [ "on", "g", "h" ],
+    [ "on", "h", "i" ],
+    [ "on-table", "i" ],
+
+    [ "on", "j", "k" ],
+    [ "on", "k", "l" ],
+    [ "on-table", "l" ],
+
+    [ "on", "m", "n" ],
+    [ "on", "n", "o" ],
+    [ "on-table", "o" ],
+
+    [ "on", "p", "q" ],
+    [ "on", "q", "r" ],
+    [ "on-table", "r" ]
+  ]
+}

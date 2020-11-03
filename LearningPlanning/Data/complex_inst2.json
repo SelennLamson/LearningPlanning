@@ -1,0 +1,123 @@
+{
+  "objects": [
+    {
+      "name": "loc1",
+      "type": "location"
+    },
+    {
+      "name": "loc2",
+      "type": "location"
+    },
+    {
+      "name": "loc3",
+      "type": "location"
+    },
+    {
+      "name": "loc4",
+      "type": "location"
+    },
+    {
+      "name": "blue",
+      "type": "color"
+    },
+    {
+      "name": "red",
+      "type": "color"
+    },
+    {
+      "name": "green",
+      "type": "color"
+    },
+    {
+      "name": "crate",
+      "type": "object"
+    },
+    {
+      "name": "box",
+      "type": "object"
+    },
+    {
+      "name": "mug",
+      "type": "object"
+    },
+    {
+      "name": "bulb",
+      "type": "object"
+    },
+    {
+      "name": "B-bucket",
+      "type": "object"
+    },
+    {
+      "name": "G-bucket",
+      "type": "object"
+    },
+    {
+      "name": "R-bucket",
+      "type": "object"
+    }
+  ],
+  "init": [
+    [ "pushable", "crate" ],
+    [ "pushable", "box" ],
+    [ "pushable", "G-bucket" ],
+    [ "grabbable", "box" ],
+    [ "grabbable", "mug" ],
+    [ "grabbable", "bulb" ],
+    [ "grabbable", "R-bucket" ],
+    [ "light", "bulb" ],
+    [ "light", "crate" ],
+    [ "unplugged", "bulb" ],
+    [ "unplugged", "crate" ],
+    [ "is-paint", "B-bucket", "blue" ],
+    [ "is-paint", "R-bucket", "red" ],
+    [ "is-paint", "G-bucket", "green" ],
+    [ "has-color", "crate", "blue" ],
+    [ "has-color", "box", "blue" ],
+    [ "has-color", "mug", "blue" ],
+    [ "at", "crate", "loc1" ],
+    [ "at", "box", "loc1" ],
+    [ "at", "B-bucket", "loc1" ],
+    [ "at", "R-bucket", "loc2" ],
+    [ "at", "G-bucket", "loc3" ],
+    [ "at", "mug", "loc2" ],
+    [ "at", "bulb", "loc2" ],
+    [ "on-floor", "crate" ],
+    [ "on-floor", "box" ],
+    [ "on-floor", "mug" ],
+    [ "on-floor", "B-bucket" ],
+    [ "on-floor", "R-bucket" ],
+    [ "on-floor", "G-bucket" ],
+    [ "on-floor", "bulb" ],
+    [ "clear", "crate" ],
+    [ "clear", "box" ],
+    [ "clear", "mug" ],
+    [ "clear", "bulb" ],
+    [ "clear", "B-bucket" ],
+    [ "clear", "G-bucket" ],
+    [ "clear", "R-bucket" ],
+    [ "bigger", "crate", "box" ],
+    [ "bigger", "crate", "mug" ],
+    [ "bigger", "crate", "B-bucket" ],
+    [ "bigger", "crate", "bulb" ],
+    [ "bigger", "box", "mug" ],
+    [ "bigger", "box", "bulb" ],
+    [ "bigger", "mug", "bulb" ],
+    [ "powered", "loc1" ],
+    [ "not-powered", "loc2" ],
+    [ "powered", "loc3" ],
+    [ "not-powered", "loc4" ],
+    [ "clear", "loc1" ],
+    [ "clear", "loc2" ],
+    [ "clear", "loc3" ],
+    [ "clear", "loc4" ],
+    [ "arm-empty" ],
+    [ "robot-at", "loc2" ]
+  ],
+	"goal": [
+		[ "lit", "bulb" ],
+		[ "has-color", "mug", "red" ],
+		[ "on", "box", "crate" ],
+		[ "at", "crate", "loc2" ]
+	]
+}

@@ -1,0 +1,19 @@
+Initial state: Table(A), Table(B), Table(C), Table(D), Table(E), Table(F), Clear(A), Clear(B), Clear(C), Clear(D), Clear(E), Clear(F), ArmEmpty()
+Goal state: On(A, B), On(B, C), On(C, D), On(D, E), On(E, F)
+
+Actions:
+	Pickup(X)
+	Preconditions: ArmEmpty(), Clear(X), Table(X)
+	Postconditions: Holding(X), !ArmEmpty() !Clear(X), !Table(X)
+
+	Putdown(X)
+	Preconditions: Holding(X)
+	Postconditions: ArmEmpty(), Table(X), Clear(X), !Holding(X)
+
+	Stack(X, Y)
+	Preconditions: Holding(X), Clear(Y)
+	Postconditions: ArmEmpty(), On(X, Y), Clear(X), !Holding(X), !Clear(Y)
+
+	Unstack(X, Y)
+	Preconditions: Clear(X), ArmEmpty(), On(X, Y)
+	Postconditions: Holding(X), Clear(Y), !On(X, Y), !ArmEmpty(), !Clear(X)

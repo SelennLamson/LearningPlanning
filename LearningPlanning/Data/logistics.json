@@ -1,0 +1,60 @@
+{
+	"types": [
+		{
+			"name": "city",
+			"parent": null
+		},
+		{
+			"name": "box",
+			"parent": null
+		},
+		{
+			"name": "truck",
+			"parent": null
+		}
+	],
+	"predicates": [
+		{
+			"name": "truckin",
+			"arity": 2
+		},
+		{
+			"name": "boxin",
+			"arity": 2
+		}
+	],
+	"actions": [
+		{
+			"name": "load",
+			"parameters": [ "b", "t", "c" ],
+			"paramtypes": [ "box", "truck", "city" ],
+			"precondition": [
+				[ "boxin", "b", "c" ],
+				[ "truckin", "t", "c" ]
+			],
+			"add": [ [ "boxin", "b", "t" ] ],
+			"del": [ [ "boxin", "b", "c" ] ]
+		},
+		{
+			"name": "unload",
+			"parameters": [ "b", "t", "c" ],
+			"paramtypes": [ "box", "truck", "city" ],
+			"precondition": [
+				[ "boxin", "b", "t" ],
+				[ "truckin", "t", "c" ]
+			],
+			"add": [ [ "boxin", "b", "c" ] ],
+			"del": [ [ "boxin", "b", "t" ] ]
+		},
+		{
+			"name": "drive",
+			"parameters": [ "t", "city1", "city2" ],
+			"paramtypes": [ "truck", "city", "city" ],
+			"precondition": [
+				[ "truckin", "t", "city1" ]
+			],
+			"add": [ [ "truckin", "t", "city2" ] ],
+			"del": [ [ "truckin", "t", "city1" ] ]
+		}
+	]
+}

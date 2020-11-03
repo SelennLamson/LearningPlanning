@@ -1,0 +1,50 @@
+{
+  "objects": [
+    {
+      "name": "a",
+      "type": "cube"
+    },
+    {
+      "name": "b",
+      "type": "cube"
+    },
+    {
+      "name": "c",
+      "type": "cube"
+    },
+    {
+      "name": "d",
+      "type": "cube"
+    },
+    {
+      "name": "e",
+      "type": "cube"
+    },
+    {
+      "name": "f",
+      "type": "cube"
+    }
+  ],
+  "init": [
+    [ "on-table", "a" ],
+    [ "on-table", "b" ],
+    [ "on-table", "c" ],
+    [ "on-table", "d" ],
+    [ "on-table", "e" ],
+    [ "on-table", "f" ],
+    [ "clear", "a" ],
+    [ "clear", "b" ],
+    [ "clear", "c" ],
+    [ "clear", "d" ],
+    [ "clear", "e" ],
+    [ "clear", "f" ],
+    [ "arm-empty" ]
+  ],
+  "goal": [
+    [ "on", "a", "b" ],
+    [ "on", "b", "c" ],
+    [ "on", "c", "d" ],
+    [ "on", "d", "e" ],
+    [ "on", "e", "f" ]
+  ]
+}

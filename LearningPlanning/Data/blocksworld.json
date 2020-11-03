@@ -1,0 +1,103 @@
+{
+	"types": [
+		{
+			"name": "cube",
+			"parent": null
+		}
+	],
+	"predicates": [
+		{
+			"name": "clear",
+			"arity": 1
+		},
+		{
+			"name": "on-table",
+			"arity": 1
+		},
+		{
+			"name": "arm-empty",
+			"arity": 0
+		},
+		{
+			"name": "holding",
+			"arity": 1
+		},
+		{
+			"name": "on",
+			"arity": 2
+		}
+	],
+	"actions": [
+		{
+			"name": "pickup",
+			"parameters": [ "ob" ],
+			"paramtypes": [ "cube" ],
+			"precondition": [
+				[ "clear", "ob" ],
+				[ "on-table", "ob" ],
+				[ "arm-empty" ]
+			],
+			"add": [
+				[ "holding", "ob" ]
+			],
+			"del": [
+				[ "clear", "ob" ],
+				[ "on-table", "ob" ],
+				[ "arm-empty" ]
+			]
+		},
+		{
+			"name": "putdown",
+			"parameters": [ "ob" ],
+			"paramtypes": [ "cube" ],
+			"precondition": [
+				[ "holding", "ob" ]
+			],
+			"add": [
+				[ "clear", "ob" ],
+				[ "arm-empty" ],
+				[ "on-table", "ob" ]
+			],
+			"del": [
+				[ "holding", "ob" ]
+			]
+		},
+		{
+			"name": "stack",
+			"parameters": [ "ob", "underob" ],
+			"paramtypes": [ "cube", "cube" ],
+			"precondition": [
+				[ "clear", "underob" ],
+				[ "holding", "ob" ]
+			],
+			"add": [
+				[ "clear", "ob" ],
+				[ "arm-empty" ],
+				[ "on", "ob", "underob" ]
+			],
+			"del": [
+				[ "holding", "ob" ],
+				[ "clear", "underob" ]
+			]
+		},
+		{
+			"name": "unstack",
+			"parameters": [ "ob", "underob" ],
+			"paramtypes": [ "cube", "cube" ],
+			"precondition": [
+				[ "on", "ob", "underob" ],
+				[ "clear", "ob" ],
+				[ "arm-empty" ]
+			],
+			"add": [
+				[ "holding", "ob" ],
+				[ "clear", "underob" ]
+			],
+			"del": [
+				[ "on", "ob", "underob" ],
+				[ "clear", "ob" ],
+				[ "arm-empty" ]
+			]
+		}
+	]
+}
