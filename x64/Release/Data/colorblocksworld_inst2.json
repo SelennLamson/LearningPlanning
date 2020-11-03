@@ -1,0 +1,83 @@
+{
+  "objects": [
+    {
+      "name": "A",
+      "type": "object"
+    },
+    {
+      "name": "B",
+      "type": "object"
+    },
+    {
+      "name": "C",
+      "type": "object"
+    },
+    {
+      "name": "D",
+      "type": "object"
+    },
+    {
+      "name": "E",
+      "type": "object"
+    },
+    {
+      "name": "F",
+      "type": "object"
+    },
+    {
+      "name": "G",
+      "type": "object"
+    },
+    {
+      "name": "H",
+      "type": "object"
+    },
+    {
+      "name": "I",
+      "type": "object"
+    },
+    {
+      "name": "J",
+      "type": "object"
+    }
+  ],
+  "init": [
+    [ "on", "A", "floor" ],
+    [ "on", "B", "floor" ],
+    [ "on", "C", "floor" ],
+    [ "on", "D", "floor" ],
+    [ "on", "E", "floor" ],
+    [ "on", "F", "floor" ],
+    [ "on", "G", "floor" ],
+    [ "on", "H", "floor" ],
+    [ "on", "I", "floor" ],
+    [ "on", "J", "floor" ],
+    [ "clear", "A" ],
+    [ "clear", "B" ],
+    [ "clear", "C" ],
+    [ "clear", "D" ],
+    [ "clear", "E" ],
+    [ "clear", "F" ],
+    [ "clear", "G" ],
+    [ "clear", "H" ],
+    [ "clear", "I" ],
+    [ "clear", "J" ],
+    [ "w", "A" ],
+    [ "w", "B" ],
+    [ "w", "C" ],
+    [ "w", "D" ],
+    [ "w", "E" ],
+    [ "b", "F" ],
+    [ "b", "G" ],
+    [ "b", "H" ],
+    [ "b", "I" ],
+    [ "b", "J" ]
+  ],
+  "goal": [
+    [ "on", "A", "E" ],
+    [ "on", "B", "F" ],
+    [ "on", "C", "D" ],
+	  [ "w", "F" ],
+	  [ "b", "A" ]
+  ]
+}

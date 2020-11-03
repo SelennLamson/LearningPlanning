@@ -1,0 +1,11 @@
+{
+	"objects": [ "a" ],
+	"init": [
+		[ "on-table", "a" ],
+		[ "clear", "a" ],
+		[ "arm-empty" ]
+	],
+  "goal": [
+    [ "holding", "a" ]
+  ]
+}

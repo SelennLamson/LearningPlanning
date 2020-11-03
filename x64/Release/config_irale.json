@@ -1,0 +1,72 @@
+{
+	"agent": "LearningAgent",
+	"outputfile": "stats_IRALe",
+	"domain": "complex_lessvars",
+	"problems": [
+		"complex_inst2"
+	],
+	"width": 1200,
+	"height": 400,
+	"waitms": 0,
+	"seed": 123456789,
+
+	"verbose": false,
+	"debug": false,
+	"defaultauto": true,
+
+	"useheadstart": false,
+	"headstart": [
+		"complex_inst2_headstart"
+	],
+
+	"test": {
+		"performtests": true,
+		"testproblem": "complex_inst2",
+		"testfile": "generated_traces_100pa_complex_lessvars.json",
+		"planningproblems": 20
+	},
+
+	"irale": {
+		"runs": 25,
+		"steps": 10000,
+		"reset_state_after_stagnation": false,
+		"reset_state_after": 30,
+		"test_domain_every": 30,
+		"test_only_when_knowledge_modified": true,
+		"always_generalize_constants": false,
+		"use_bayesian_explorer": false
+	},
+
+	"bayesian_explorer": {
+		"random": false,
+		"gamma": 0.99,
+		"start_pu": 0.2,
+		"estimated_rules_per_action": 2,
+		"exploration_time_limit": 1.0,
+
+		"random_plans": 10,
+		"random_experiments": 50,
+		"random_action_trials": 50,
+		"plan_depth": 4,
+
+		"use_stagnation": false,
+		"stagnation_threshold": 20,
+
+		"use_passthrough": false,
+		"passthrough_threshold": 0.8,
+
+		"meta_probability": 0.0,
+		"base_reset_prob": 0.2,
+		"fact_removal_discount": 1.0,
+
+		"random_discount": 0.98,
+		"focus_specific_rules": 0.0,
+
+		"save_motivation_trace": false,
+		"motivation_trace_file_name": "trace_motivation"
+	},
+
+	"irale_explorer": {
+		"epsilon": 0.5
+	}
+}

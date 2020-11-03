@@ -1,0 +1,72 @@
+{
+	"objects": [
+		{
+			"name": "b1",
+			"type": "box"
+		},
+		{
+			"name": "b2",
+			"type": "box"
+		},
+		{
+			"name": "b3",
+			"type": "box"
+		},
+		{
+			"name": "b4",
+			"type": "box"
+		},
+		{
+			"name": "t1",
+			"type": "truck"
+		},
+		{
+			"name": "t2",
+			"type": "truck"
+		},
+		{
+			"name": "t3",
+			"type": "truck"
+		},
+		{
+			"name": "t4",
+			"type": "truck"
+		},
+		{
+			"name": "c1",
+			"type": "city"
+		},
+		{
+			"name": "c2",
+			"type": "city"
+		},
+		{
+			"name": "c3",
+			"type": "city"
+		},
+		{
+			"name": "c4",
+			"type": "city"
+		}
+	],
+	"init": [
+		[ "boxin", "b1", "c1" ],
+		[ "boxin", "b2", "c1" ],
+		[ "boxin", "b3", "c1" ],
+		[ "boxin", "b4", "c1" ],
+		[ "truckin", "t1", "c2" ],
+		[ "truckin", "t2", "c2" ],
+		[ "truckin", "t3", "c2" ],
+		[ "truckin", "t4", "c2" ]
+	],
+	"goal": [
+		[ "boxin", "b1", "c3" ],
+		[ "boxin", "b2", "c3" ],
+		[ "boxin", "b3", "c4" ],
+		[ "boxin", "b4", "c4" ],
+		[ "truckin", "t1", "c1" ],
+		[ "truckin", "t2", "c1" ],
+		[ "truckin", "t3", "c1" ],
+		[ "truckin", "t4", "c1" ]
+	]
+}

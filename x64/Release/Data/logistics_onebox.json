@@ -1,0 +1,49 @@
+{
+	"predicates": [
+		{ "name": "empty", "arity": 1 },
+		{ "name": "ontruck", "arity": 2 },
+		{ "name": "truckin", "arity": 2 },
+		{ "name": "boxin", "arity": 2 },
+		{ "name": "truck", "arity": 1 },
+		{ "name": "box", "arity": 1 },
+		{ "name": "city", "arity": 1 }
+	],
+	"actions": [
+		{
+			"name": "load",
+			"parameters": [ "b", "t", "c" ],
+			"precondition": [
+				[ "box", "b" ],
+				[ "truck", "t" ],
+				[ "empty", "t" ],
+				[ "city", "c" ],
+				[ "boxin", "b", "c" ],
+				[ "truckin", "t", "c" ]],
+			"add": [[ "boxin", "b", "t" ]],
+			"del": [[ "boxin", "b", "c" ], [ "empty", "t" ]]
+		},
+		{
+			"name": "unload",
+			"parameters": [ "b", "t", "c" ],
+			"precondition": [
+				[ "box", "b" ],
+				[ "truck", "t" ],
+				[ "city", "c" ],
+				[ "boxin", "b", "t" ],
+				[ "truckin", "t", "c" ]],
+			"add": [[ "boxin", "b", "c" ], [ "empty", "t" ]],
+			"del": [[ "boxin", "b", "t" ]]
+		},
+		{
+			"name": "drive",
+			"parameters": [ "t", "c1", "c2" ],
+			"precondition": [
+				[ "truck", "t" ],
+				[ "city", "c1" ],
+				[ "city", "c2" ],
+				[ "truckin", "t", "c1" ]],
+			"add": [[ "truckin", "t", "c2" ]],
+			"del": [[ "truckin", "t", "c1" ]]
+		}
+	]
+}

@@ -1,0 +1,62 @@
+{
+  "objects": [
+    {
+      "name": "a",
+      "type": "object"
+    },
+    {
+      "name": "b",
+      "type": "object"
+    },
+    {
+      "name": "c",
+      "type": "object"
+    },
+    {
+      "name": "d",
+      "type": "object"
+    },
+    {
+      "name": "e",
+      "type": "object"
+    },
+    {
+      "name": "f",
+      "type": "object"
+    },
+    {
+      "name": "g",
+      "type": "object"
+    }
+  ],
+  "init": [
+    [ "on", "a", "floor" ],
+    [ "on", "b", "floor" ],
+    [ "on", "c", "floor" ],
+    [ "on", "d", "floor" ],
+    [ "on", "e", "floor" ],
+    [ "on", "f", "floor" ],
+    [ "on", "g", "floor" ],
+    [ "clear", "a" ],
+    [ "clear", "b" ],
+    [ "clear", "c" ],
+    [ "clear", "d" ],
+    [ "clear", "e" ],
+    [ "clear", "f" ],
+    [ "clear", "g" ],
+    [ "w", "a" ],
+    [ "w", "b" ],
+    [ "w", "c" ],
+    [ "b", "d" ],
+    [ "b", "e" ],
+    [ "b", "f" ],
+    [ "b", "g" ]
+  ],
+  "goal": [
+    [ "on", "a", "e" ],
+    [ "on", "b", "f" ],
+    [ "on", "c", "d" ],
+	  [ "w", "f" ],
+	  [ "b", "a" ]
+  ]
+}

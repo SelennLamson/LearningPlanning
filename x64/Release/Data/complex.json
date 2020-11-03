@@ -1,0 +1,314 @@
+{
+	"types": [
+		{
+			"name": "location",
+			"parent": null
+		},
+		{
+			"name": "color",
+			"parent": null
+		},
+		{
+			"name": "object",
+			"parent": null
+		}
+	],
+	"predicates": [
+		{
+			"name": "grabbable",
+			"arity": 1
+		},
+		{
+			"name": "pushable",
+			"arity": 1
+		},
+		{
+			"name": "light",
+			"arity": 1
+		},
+		{
+			"name": "is-paint",
+			"arity": 2
+		},
+		{
+			"name": "has-color",
+			"arity": 2
+		},
+		{
+			"name": "at",
+			"arity": 2
+		},
+		{
+			"name": "on",
+			"arity": 2
+		},
+		{
+			"name": "on-floor",
+			"arity": 1
+		},
+		{
+			"name": "clear",
+			"arity": 1
+		},
+		{
+			"name": "lit",
+			"arity": 1
+		},
+		{
+			"name": "plugged",
+			"arity": 2
+		},
+		{
+			"name": "bigger",
+			"arity": 2
+		},
+		{
+			"name": "powered",
+			"arity": 1
+		},
+		{
+			"name": "not-powered",
+			"arity": 1
+		},
+		{
+			"name": "arm-empty",
+			"arity": 0
+		},
+		{
+			"name": "holding",
+			"arity": 1
+		},
+		{
+			"name": "robot-at",
+			"arity": 1
+		}
+	],
+	"actions": [
+		{
+			"name": "move",
+			"parameters": [ "from", "to" ],
+			"paramtypes": [ "location", "location" ],
+			"precondition": [
+				[ "robot-at", "from" ]
+			],
+			"add": [
+				[ "robot-at", "to" ]
+			],
+			"del": [
+				[ "robot-at", "from" ]
+			]
+		},
+		{
+			"name": "push",
+			"parameters": [ "obj", "to" ],
+			"paramtypes": [ "object", "location" ],
+			"variables": [ "from" ],
+			"vartypes": [ "location" ],
+			"precondition": [
+				[ "pushable", "obj" ],
+				[ "on-floor", "obj" ],
+				[ "at", "obj", "from" ],
+				[ "clear", "obj" ],
+				[ "robot-at", "from" ]
+			],
+			"add": [
+				[ "at", "obj", "to" ],
+				[ "robot-at", "to" ]
+			],
+			"del": [
+				[ "at", "obj", "from" ],
+				[ "robot-at", "from" ]
+			]
+		},
+		{
+			"name": "grab",
+			"parameters": [ "obj" ],
+			"paramtypes": [ "object" ],
+			"variables": [ "from" ],
+			"vartypes": [ "location" ],
+			"precondition": [
+				[ "grabbable", "obj" ],
+				[ "robot-at", "from" ],
+				[ "at", "obj", "from" ],
+				[ "on-floor", "obj" ],
+				[ "clear", "obj" ],
+				[ "arm-empty" ]
+			],
+			"add": [
+				[ "holding", "obj" ]
+			],
+			"del": [
+				[ "at", "obj", "from" ],
+				[ "clear", "obj" ],
+				[ "on-floor", "obj" ],
+				[ "arm-empty" ]
+			]
+		},
+		{
+			"name": "drop",
+			"parameters": [ "obj", "to" ],
+			"paramtypes": [ "object", "location" ],
+			"precondition": [
+				[ "grabbable", "obj" ],
+				[ "robot-at", "to" ],
+				[ "holding", "obj" ]
+			],
+			"add": [
+				[ "at", "obj", "to" ],
+				[ "on-floor", "obj" ],
+				[ "clear", "obj" ],
+				[ "arm-empty" ]
+			],
+			"del": [
+				[ "holding", "obj" ]
+			]
+		},
+		{
+			"name": "stack",
+			"parameters": [ "obj", "on-obj" ],
+			"paramtypes": [ "object", "object" ],
+			"variables": [ "loc" ],
+			"vartypes": [ "location" ],
+			"precondition": [
+				[ "grabbable", "obj" ],
+				[ "bigger", "on-obj", "obj" ],
+				[ "at", "on-obj", "loc" ],
+				[ "robot-at", "loc" ],
+				[ "clear", "on-obj" ],
+				[ "holding", "obj" ]
+			],
+			"add": [
+				[ "on", "obj", "on-obj" ],
+				[ "clear", "obj" ],
+				[ "at", "obj", "loc" ],
+				[ "arm-empty" ]
+			],
+			"del": [
+				[ "clear", "on-obj" ],
+				[ "holding", "obj" ]
+			]
+		},
+		{
+			"name": "unstack",
+			"parameters": [ "obj", "on-obj" ],
+			"paramtypes": [ "object", "object" ],
+			"variables": [ "loc" ],
+			"vartypes": [ "location" ],
+			"precondition": [
+				[ "grabbable", "obj" ],
+				[ "at", "obj", "loc" ],
+				[ "robot-at", "loc" ],
+				[ "clear", "obj" ],
+				[ "on", "obj", "on-obj" ],
+				[ "arm-empty" ]
+			],
+			"add": [
+				[ "holding", "obj" ],
+				[ "clear", "on-obj" ]
+			],
+			"del": [
+				[ "arm-empty" ],
+				[ "clear", "obj" ],
+				[ "on", "obj", "on-obj" ],
+				[ "at", "obj", "loc" ]
+			]
+		},
+		{
+			"name": "paint",
+			"parameters": [ "obj", "with-obj" ],
+			"paramtypes": [ "object", "object" ],
+			"variables": [ "loc", "color", "prev-color" ],
+			"vartypes": [ "location", "color", "color" ],
+			"precondition": [
+				[ "grabbable", "obj" ],
+				[ "is-paint", "with-obj", "color" ],
+				[ "at", "with-obj", "loc" ],
+				[ "robot-at", "loc" ],
+				[ "holding", "obj" ],
+				[ "has-color", "obj", "prev-color" ]
+			],
+			"add": [
+				[ "has-color", "obj", "color" ]
+			],
+			"del": [
+				[ "has-color", "obj", "prev-color" ]
+			]
+		},
+		{
+			"name": "plug",
+			"parameters": [ "obj" ],
+			"paramtypes": [ "object" ],
+			"variables": [ "loc" ],
+			"vartypes": [ "location" ],
+			"precondition": [
+				[ "light", "obj" ],
+				[ "at", "obj", "loc" ],
+				[ "clear", "loc" ],
+				[ "not-powered", "loc" ]
+			],
+			"add": [
+				[ "plugged", "obj", "loc" ]
+			],
+			"del": [
+				[ "clear", "loc" ]
+			]
+		},
+		{
+			"name": "plug",
+			"parameters": [ "obj" ],
+			"paramtypes": [ "object" ],
+			"variables": [ "loc" ],
+			"vartypes": [ "location" ],
+			"precondition": [
+				[ "light", "obj" ],
+				[ "at", "obj", "loc" ],
+				[ "clear", "loc" ],
+				[ "powered", "loc" ]
+			],
+			"add": [
+				[ "lit", "obj" ],
+				[ "plugged", "obj", "loc" ]
+			],
+			"del": [
+				[ "clear", "loc" ]
+			]
+		},
+		{
+			"name": "unplug",
+			"parameters": [ "obj" ],
+			"paramtypes": [ "object" ],
+			"variables": [ "loc" ],
+			"vartypes": [ "location" ],
+			"precondition": [
+				[ "light", "obj" ],
+				[ "plugged", "obj", "loc" ],
+				[ "not-powered", "loc" ]
+			],
+			"add": [
+				[ "clear", "loc" ]
+			],
+			"del": [
+				[ "plugged", "obj", "loc" ]
+			]
+		},
+		{
+			"name": "unplug",
+			"parameters": [ "obj" ],
+			"paramtypes": [ "object" ],
+			"variables": [ "loc" ],
+			"vartypes": [ "location" ],
+			"precondition": [
+				[ "light", "obj" ],
+				[ "plugged", "obj", "loc" ],
+				[ "powered", "loc" ]
+			],
+			"add": [
+				[ "clear", "loc" ]
+			],
+			"del": [
+				[ "plugged", "obj", "loc" ],
+				[ "lit", "obj" ]
+			]
+		}
+	]
+}

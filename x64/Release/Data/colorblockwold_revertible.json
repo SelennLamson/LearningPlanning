@@ -1,0 +1,202 @@
+{
+	"types": [
+		{
+			"name": "object",
+			"parent": null
+		},
+		{
+			"name": "immovable",
+			"parent": null
+		}
+	],
+	"constants": [
+		{
+			"name": "floor",
+			"type": "immovable"
+		}
+	],
+	"predicates": [
+		{
+			"name": "clear",
+			"arity": 1
+		},
+		{
+			"name": "on",
+			"arity": 2
+		},
+		{
+			"name": "w",
+			"arity": 1
+		},
+		{
+			"name": "b",
+			"arity": 1
+		}
+	],
+	"actions": [
+		{
+			"name": "move",
+			"parameters": [ "ob", "floor" ],
+			"paramtypes": [ "object", "immovable" ],
+			"precondition": [
+				[ "on", "ob", "floor" ],
+				[ "w", "ob" ]
+			],
+			"add": [
+				[ "b", "ob" ]
+			],
+			"del": [
+				[ "w", "ob" ]
+			]
+		},
+		{
+			"name": "move",
+			"parameters": [ "ob", "floor" ],
+			"paramtypes": [ "object", "immovable" ],
+			"precondition": [
+				[ "on", "ob", "floor" ],
+				[ "b", "ob" ]
+			],
+			"add": [
+				[ "w", "ob" ]
+			],
+			"del": [
+				[ "b", "ob" ]
+			]
+		},
+		{
+			"name": "move",
+			"parameters": [ "ob", "to" ],
+			"paramtypes": [ "object", "object" ],
+			"variables": [ "prevon" ],
+			"vartypes": [ "object" ],
+			"precondition": [
+				[ "clear", "ob" ],
+				[ "clear", "to" ],
+				[ "w", "ob" ],
+				[ "w", "to" ],
+				[ "on", "ob", "prevon" ]
+			],
+			"add": [
+				[ "on", "ob", "to" ],
+				[ "clear", "prevon" ]
+			],
+			"del": [
+				[ "clear", "to" ],
+				[ "on", "ob", "prevon" ]
+			]
+		},
+		{
+			"name": "move",
+			"parameters": [ "ob", "to" ],
+			"paramtypes": [ "object", "object" ],
+			"variables": [ "prevon" ],
+			"vartypes": [ "object" ],
+			"precondition": [
+				[ "clear", "ob" ],
+				[ "clear", "to" ],
+				[ "b", "ob" ],
+				[ "b", "to" ],
+				[ "on", "ob", "prevon" ]
+			],
+			"add": [
+				[ "on", "ob", "to" ],
+				[ "clear", "prevon" ]
+			],
+			"del": [
+				[ "clear", "to" ],
+				[ "on", "ob", "prevon" ]
+			]
+		},
+		{
+			"name": "move",
+			"parameters": [ "ob", "to" ],
+			"paramtypes": [ "object", "object" ],
+			"precondition": [
+				[ "clear", "ob" ],
+				[ "clear", "to" ],
+				[ "w", "ob" ],
+				[ "w", "to" ],
+				[ "on", "ob", "floor" ]
+			],
+			"add": [
+				[ "on", "ob", "to" ]
+			],
+			"del": [
+				[ "clear", "to" ],
+				[ "on", "ob", "floor" ]
+			]
+		},
+		{
+			"name": "move",
+			"parameters": [ "ob", "to" ],
+			"paramtypes": [ "object", "object" ],
+			"precondition": [
+				[ "clear", "ob" ],
+				[ "clear", "to" ],
+				[ "b", "ob" ],
+				[ "b", "to" ],
+				[ "on", "ob", "floor" ]
+			],
+			"add": [
+				[ "on", "ob", "to" ]
+			],
+			"del": [
+				[ "clear", "to" ],
+				[ "on", "ob", "floor" ]
+			]
+		},
+		{
+			"name": "move",
+			"parameters": [ "ob", "to" ],
+			"paramtypes": [ "object", "object" ],
+			"precondition": [
+				[ "clear", "ob" ],
+				[ "clear", "to" ],
+				[ "w", "ob" ],
+				[ "b", "to" ]
+			],
+			"add": [
+				[ "b", "ob" ]
+			],
+			"del": [
+				[ "w", "ob" ]
+			]
+		},
+		{
+			"name": "move",
+			"parameters": [ "ob", "to" ],
+			"paramtypes": [ "object", "object" ],
+			"precondition": [
+				[ "clear", "ob" ],
+				[ "clear", "to" ],
+				[ "b", "ob" ],
+				[ "w", "to" ]
+			],
+			"add": [
+				[ "w", "ob" ]
+			],
+			"del": [
+				[ "b", "ob" ]
+			]
+		},
+		{
+			"name": "move",
+			"parameters": [ "ob", "floor" ],
+			"paramtypes": [ "object", "immovable" ],
+			"variables": [ "prevon" ],
+			"vartypes": [ "object" ],
+			"precondition": [
+				[ "clear", "ob" ],
+				[ "on", "ob", "prevon" ]
+			],
+			"add": [
+				[ "on", "ob", "floor" ],
+				[ "clear", "prevon" ]
+			],
+			"del": [
+				[ "on", "ob", "prevon" ]
+			]
+		}
+	]
+}

@@ -1,0 +1,212 @@
+{
+	"types": [
+		{
+			"name": "location",
+			"parent": null
+		},
+		{
+			"name": "crate",
+			"parent": null
+		},
+		{
+			"name": "player",
+			"parent": null
+		}
+	],
+	"predicates": [
+		{
+			"name": "up",
+			"arity": 2
+		},
+		{
+			"name": "right",
+			"arity": 2
+		},
+		{
+			"name": "clear",
+			"arity": 1
+		},
+		{
+			"name": "at",
+			"arity": 2
+		}
+	],
+	"actions": [
+		{
+			"name": "move-up",
+			"parameters": [],
+			"paramtypes": [],
+			"variables": [ "pla", "loc", "dst" ],
+			"vartypes": [ "player", "location", "location" ],
+			"precondition": [
+				[ "at", "pla", "loc" ],
+				[ "up", "loc", "dst" ],
+				[ "clear", "dst" ]
+			],
+			"add": [
+				[ "at", "pla", "dst" ],
+				[ "clear", "loc" ]
+			],
+			"del": [
+				[ "clear", "dst" ],
+				[ "at", "pla", "loc" ]
+			]
+		},
+		{
+			"name": "move-down",
+			"parameters": [],
+			"paramtypes": [],
+			"variables": [ "pla", "loc", "dst" ],
+			"vartypes": [ "player", "location", "location" ],
+			"precondition": [
+				[ "at", "pla", "loc" ],
+				[ "up", "dst", "loc" ],
+				[ "clear", "dst" ]
+			],
+			"add": [
+				[ "at", "pla", "dst" ],
+				[ "clear", "loc" ]
+			],
+			"del": [
+				[ "clear", "dst" ],
+				[ "at", "pla", "loc" ]
+			]
+		},
+		{
+			"name": "move-right",
+			"parameters": [],
+			"paramtypes": [],
+			"variables": [ "pla", "loc", "dst" ],
+			"vartypes": [ "player", "location", "location" ],
+			"precondition": [
+				[ "at", "pla", "loc" ],
+				[ "right", "loc", "dst" ],
+				[ "clear", "dst" ]
+			],
+			"add": [
+				[ "at", "pla", "dst" ],
+				[ "clear", "loc" ]
+			],
+			"del": [
+				[ "clear", "dst" ],
+				[ "at", "pla", "loc" ]
+			]
+		},
+		{
+			"name": "move-left",
+			"parameters": [],
+			"paramtypes": [],
+			"variables": [ "pla", "loc", "dst" ],
+			"vartypes": [ "player", "location", "location" ],
+			"precondition": [
+				[ "at", "pla", "loc" ],
+				[ "right", "dst", "loc" ],
+				[ "clear", "dst" ]
+			],
+			"add": [
+				[ "at", "pla", "dst" ],
+				[ "clear", "loc" ]
+			],
+			"del": [
+				[ "clear", "dst" ],
+				[ "at", "pla", "loc" ]
+			]
+		},
+		{
+			"name": "move-up",
+			"parameters": [],
+			"paramtypes": [],
+			"variables": [ "pla", "loc", "dst", "nxt", "obj" ],
+			"vartypes": [ "player", "location", "location", "location", "object" ],
+			"precondition": [
+				[ "at", "pla", "loc" ],
+				[ "up", "loc", "dst" ],
+				[ "at", "obj", "dst" ],
+				[ "up", "dst", "nxt" ],
+				[ "clear", "nxt" ]
+			],
+			"add": [
+				[ "at", "pla", "dst" ],
+				[ "at", "obj", "nxt" ],
+				[ "clear", "loc" ]
+			],
+			"del": [
+				[ "clear", "nxt" ],
+				[ "at", "obj", "dst" ],
+				[ "at", "pla", "loc" ]
+			]
+		},
+		{
+			"name": "move-down",
+			"parameters": [],
+			"paramtypes": [],
+			"variables": [ "pla", "loc", "dst", "nxt", "obj" ],
+			"vartypes": [ "player", "location", "location", "location", "object" ],
+			"precondition": [
+				[ "at", "pla", "loc" ],
+				[ "up", "dst", "loc" ],
+				[ "at", "obj", "dst" ],
+				[ "up", "nxt", "dst" ],
+				[ "clear", "nxt" ]
+			],
+			"add": [
+				[ "at", "pla", "dst" ],
+				[ "at", "obj", "nxt" ],
+				[ "clear", "loc" ]
+			],
+			"del": [
+				[ "clear", "nxt" ],
+				[ "at", "obj", "dst" ],
+				[ "at", "pla", "loc" ]
+			]
+		},
+		{
+			"name": "move-left",
+			"parameters": [],
+			"paramtypes": [],
+			"variables": [ "pla", "loc", "dst", "nxt", "obj" ],
+			"vartypes": [ "player", "location", "location", "location", "object" ],
+			"precondition": [
+				[ "at", "pla", "loc" ],
+				[ "right", "dst", "loc" ],
+				[ "at", "obj", "dst" ],
+				[ "right", "nxt", "dst" ],
+				[ "clear", "nxt" ]
+			],
+			"add": [
+				[ "at", "pla", "dst" ],
+				[ "at", "obj", "nxt" ],
+				[ "clear", "loc" ]
+			],
+			"del": [
+				[ "clear", "nxt" ],
+				[ "at", "obj", "dst" ],
+				[ "at", "pla", "loc" ]
+			]
+		},
+		{
+			"name": "move-right",
+			"parameters": [],
+			"paramtypes": [],
+			"variables": [ "pla", "loc", "dst", "nxt", "obj" ],
+			"vartypes": [ "player", "location", "location", "location", "object" ],
+			"precondition": [
+				[ "at", "pla", "loc" ],
+				[ "right", "loc", "dst" ],
+				[ "at", "obj", "dst" ],
+				[ "right", "dst", "nxt" ],
+				[ "clear", "nxt" ]
+			],
+			"add": [
+				[ "at", "pla", "dst" ],
+				[ "at", "obj", "nxt" ],
+				[ "clear", "loc" ]
+			],
+			"del": [
+				[ "clear", "nxt" ],
+				[ "at", "obj", "dst" ],
+				[ "at", "pla", "loc" ]
+			]
+		}
+	]
+}
