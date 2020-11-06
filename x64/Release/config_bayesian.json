@@ -27,14 +27,16 @@
 	},
 
 	"irale": {
-		"runs": 15,
+		"runs": 1,
 		"steps": 10000,
 		"reset_state_after_stagnation": false,
 		"reset_state_after": 30,
 		"test_domain_every": 30,
 		"test_only_when_knowledge_modified": true,
 		"always_generalize_constants": false,
-		"use_bayesian_explorer": true
+		"use_bayesian_explorer": true,
+		"least_general": false,
+		"generalization_trials": 1
 	},
 
 	"bayesian_explorer": {
@@ -42,12 +44,12 @@
 		"gamma": 0.99,
 		"start_pu": 0.01,
 		"estimated_rules_per_action": 2,
-		"exploration_time_limit": 1.0,
+		"exploration_time_limit": 2.0,
 
-		"random_plans": 10,
-		"random_experiments": 10,
+		"random_plans": 20,
+		"random_experiments": 5,
 		"random_action_trials": 50,
-		"plan_depth": 4,
+		"plan_depth": 3,
 
 		"use_stagnation": false,
 		"stagnation_threshold": 50,
@@ -60,7 +62,7 @@
 		"fact_removal_discount": 1.0,
 
 		"random_discount": 0.98,
-		"focus_specific_rules": 0.1,
+		"focus_specific_rules": 0.0,
 
 		"save_motivation_trace": false,
 		"motivation_trace_file_name": "trace_motivation"

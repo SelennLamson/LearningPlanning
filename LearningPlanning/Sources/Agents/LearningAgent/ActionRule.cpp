@@ -15,7 +15,7 @@
 #include "Agents/LearningAgent/LearningAgent.h"
 
 #define PRECISION 0.001f
-#define SUBS_FOR_FULFILMENT 8
+#define SUBS_FOR_FULFILMENT 20
 #define SUBS_FOR_CORROBORATION 20
 
 bool varOccurs(Term var, set<Literal> literals) {
@@ -1166,9 +1166,11 @@ float cdProbTree(vector<pair<Literal, float>>& precNecs, vector<pair<Term, float
 	set<Term> newTrueConsts = trueConsts;
 	if (lit) newTruePreconds.insert(niPrec);
 	else newTrueConsts.insert(niCst);
-	float trueBranchValue = cdProbTree(precNecs, cstNecs, choiceIndex + 1, branchPower * choicePower, cdsTrue, newTruePreconds, newTrueConsts);
+	float trueBranchValue = choicePower * branchPower;
+	if (choicePower * branchPower >= PRECISION)
+		trueBranchValue = cdProbTree(precNecs, cstNecs, choiceIndex + 1, branchPower * choicePower, cdsTrue, newTruePreconds, newTrueConsts);
 
-	pruneFalseBranch |= choicePower == 1.0f;
+	pruneFalseBranch |= branchPower * (1.0f - choicePower) < PRECISION;
 	if (pruneFalseBranch)
 		return trueBranchValue;
 

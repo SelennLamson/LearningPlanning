@@ -5,14 +5,15 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
 
-def plot_category(category, files, allfiles=True, drawregions=True, step=1, dense=False):
+def plot_category(category, files, allfiles=True, drawregions=True, step=1, dense=False, forward=0):
     if dense:
-        fig, axs = plt.subplots(3, 2, figsize=(10, 15))
+        fig, axs = plt.subplots(2, 3, figsize=(15, 10))
         i0 = (0, 0)
         i1 = (0, 1)
-        i2 = (1, 0)
-        i3 = (1, 1)
-        i4 = (2, 0)
+        i2 = (0, 2)
+        i3 = (1, 0)
+        i4 = (1, 1)
+        i5 = (1, 2)
     else:
         fig, axs = plt.subplots(5, 1, figsize=(10, 50))
         i0 = 0
@@ -20,12 +21,17 @@ def plot_category(category, files, allfiles=True, drawregions=True, step=1, dens
         i2 = 2
         i3 = 3
         i4 = 4
+        i5 = None
 
     colors = np.array([
+        [29, 81, 82],
+        [78, 193, 196],
+        [217, 69, 74],
+        
+        [226, 185, 0],
         [110, 0, 255],
         [255, 0, 144],
         [255, 67, 0],
-        [226, 185, 0],
         
         [140, 255, 64],
         [64, 140, 255],
@@ -65,14 +71,16 @@ def plot_category(category, files, allfiles=True, drawregions=True, step=1, dens
             print("Error loading:", category + "/" + f)
             continue
         
-        legend = category + ": " + f[6:-4].replace("_", " ")
+        #legend = category + ": " + f[6:-4].replace("_", " ")
+        legend = f[6:-4].replace("_", " ")
 
         # Plotting counter-examples acquisition
         y = np.array([[df[col][i] for col in df.columns if col.startswith("CounterExamples_")]
                       for i in range(len(df)) if i % step == 0], dtype=float)
         y[y > 10000] = 0
+        y = y[forward:]
         ymean = y.mean(axis=1)
-        x = np.arange(y.shape[0]) * step
+        x = np.arange(y.shape[0]) * step + step * forward
 
         color = colors[i % len(colors), :]
         axs[i0].plot(x, ymean, lw=2, label=legend, color=color)
@@ -89,6 +97,7 @@ def plot_category(category, files, allfiles=True, drawregions=True, step=1, dens
                      for i in range(len(df)) if i % step == 0], dtype=float)
         y[y > 40.0] = 100.0
         y[y < -40.0] = 100.0
+        y = y[forward:]
         
         ymean = y.mean(axis=1)
 
@@ -106,6 +115,7 @@ def plot_category(category, files, allfiles=True, drawregions=True, step=1, dens
                      for i in range(len(df)) if i % step == 0], dtype=float)
         y[y > 40.0] = 1.0
         y[y < -40.0] = 1.0
+        y = y[forward:]
 
         if (len(y[0]) == 0):
             continue
@@ -132,6 +142,7 @@ def plot_category(category, files, allfiles=True, drawregions=True, step=1, dens
                      for i in range(len(df)) if i % step == 0], dtype=float)
         y[y > 40.0] = 40.0
         y[y < -40.0] = 40.0
+        y = y[forward:]
 
         if (len(y[0]) == 0):
             continue
@@ -158,6 +169,7 @@ def plot_category(category, files, allfiles=True, drawregions=True, step=1, dens
                      for i in range(len(df)) if i % step == 0], dtype=float)
         y[y > 40.0] = -1.0
         y[y < -40.0] = -1.0
+        y = y[forward:]
         if (len(y[0]) == 0):
             continue
 
@@ -204,4 +216,10 @@ def plot_category(category, files, allfiles=True, drawregions=True, step=1, dens
     axs[i4].set_title("Planning Distance" + detail)
     axs[i4].set_xlabel("Actions")
     axs[i4].set_ylabel("Planning Distance")
+    
+    if dense:
+        axs[i5].set_visible(False)
+    
     plt.show()
+    
+    return fig

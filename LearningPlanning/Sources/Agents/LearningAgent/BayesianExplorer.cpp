@@ -111,7 +111,7 @@ void BayesianExplorer::setActionLiterals(set<Literal> baseActionLiterals) {
 
 	foreach(action, actionLiterals)
 		if (!in(unknownRules, *action))
-			unknownRules[*action] = UnknownRule(bayesianConfig->getFloat("start_pu"), domain, allInsts.size(), *action);
+			unknownRules[*action] = UnknownRule(bayesianConfig->getFloat("start_pu") * 0.1f, domain, allInsts.size(), *action);
 }
 
 Literal BayesianExplorer::getNextAction(State state) {

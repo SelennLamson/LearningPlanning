@@ -1,0 +1,168 @@
+{
+  "objects": [
+    {
+      "name": "locA",
+      "type": "location"
+    },
+    {
+      "name": "locB",
+      "type": "location"
+    },
+    {
+      "name": "locC",
+      "type": "location"
+    },
+    {
+      "name": "locD",
+      "type": "location"
+    },
+    {
+      "name": "locE",
+      "type": "location"
+    },
+    {
+      "name": "blue",
+      "type": "color"
+    },
+    {
+      "name": "red",
+      "type": "color"
+    },
+    {
+      "name": "green",
+      "type": "color"
+    },
+    {
+      "name": "oCrate",
+      "type": "object"
+    },
+    {
+      "name": "oCrate2",
+      "type": "object"
+    },
+    {
+      "name": "oBox",
+      "type": "object"
+    },
+    {
+      "name": "oMug",
+      "type": "object"
+    },
+    {
+      "name": "oMug2",
+      "type": "object"
+    },
+    {
+      "name": "oBulb",
+      "type": "object"
+    },
+    {
+      "name": "oB-bucket",
+      "type": "object"
+    },
+    {
+      "name": "oG-bucket",
+      "type": "object"
+    },
+    {
+      "name": "oR-bucket",
+      "type": "object"
+    },
+    {
+      "name": "oR-bucket2",
+      "type": "object"
+    }
+  ],
+  "init": [
+    [ "pushable", "oCrate" ],
+    [ "pushable", "oCrate2" ],
+    [ "pushable", "oBox" ],
+    [ "pushable", "oG-bucket" ],
+    [ "grabbable", "oBox" ],
+    [ "grabbable", "oMug" ],
+    [ "grabbable", "oMug2" ],
+    [ "grabbable", "oBulb" ],
+    [ "grabbable", "oR-bucket" ],
+    [ "light", "oBulb" ],
+    [ "light", "oCrate" ],
+    [ "light", "oCrate2" ],
+    [ "unplugged", "oBulb" ],
+    [ "unplugged", "oCrate" ],
+    [ "unplugged", "oCrate2" ],
+    [ "is-paint", "oB-bucket", "blue" ],
+    [ "is-paint", "oR-bucket", "red" ],
+    [ "is-paint", "oR-bucket2", "red" ],
+    [ "is-paint", "oG-bucket", "green" ],
+    [ "has-color", "oCrate", "blue" ],
+    [ "has-color", "oCrate2", "green" ],
+    [ "has-color", "oBox", "red" ],
+    [ "has-color", "oMug", "blue" ],
+    [ "has-color", "oMug2", "green" ],
+    [ "at", "oCrate", "locA" ],
+    [ "at", "oCrate2", "locC" ],
+    [ "at", "oBox", "locA" ],
+    [ "at", "oB-bucket", "locA" ],
+    [ "at", "oR-bucket", "locD" ],
+    [ "at", "oR-bucket2", "locE" ],
+    [ "at", "oG-bucket", "locC" ],
+    [ "at", "oMug", "locB" ],
+    [ "at", "oMug2", "locA" ],
+    [ "at", "oBulb", "locE" ],
+    [ "on-floor", "oCrate" ],
+    [ "on-floor", "oCrate2" ],
+    [ "on-floor", "oBox" ],
+    [ "on-floor", "oMug" ],
+    [ "on-floor", "oMug2" ],
+    [ "on-floor", "oB-bucket" ],
+    [ "on-floor", "oR-bucket" ],
+    [ "on-floor", "oR-bucket2" ],
+    [ "on-floor", "oG-bucket" ],
+    [ "on-floor", "oBulb" ],
+    [ "clear", "oCrate" ],
+    [ "clear", "oCrate2" ],
+    [ "clear", "oBox" ],
+    [ "clear", "oMug" ],
+    [ "clear", "oMug2" ],
+    [ "clear", "oBulb" ],
+    [ "clear", "oB-bucket" ],
+    [ "clear", "oG-bucket" ],
+    [ "clear", "oR-bucket" ],
+    [ "clear", "oR-bucket2" ],
+    [ "bigger", "oCrate", "oBox" ],
+    [ "bigger", "oCrate2", "oBox" ],
+    [ "bigger", "oCrate", "oMug" ],
+    [ "bigger", "oCrate", "oMug2" ],
+    [ "bigger", "oCrate2", "oMug" ],
+    [ "bigger", "oCrate2", "oMug2" ],
+    [ "bigger", "oCrate", "oB-bucket" ],
+    [ "bigger", "oCrate2", "oB-bucket" ],
+    [ "bigger", "oCrate", "oBulb" ],
+    [ "bigger", "oCrate2", "oBulb" ],
+    [ "bigger", "oCrate", "oCrate2" ],
+    [ "bigger", "oBox", "oMug" ],
+    [ "bigger", "oBox", "oMug2" ],
+    [ "bigger", "oBox", "oBulb" ],
+    [ "bigger", "oMug", "oBulb" ],
+    [ "bigger", "oMug2", "oBulb" ],
+    [ "powered", "locA" ],
+    [ "not-powered", "locB" ],
+    [ "powered", "locC" ],
+    [ "not-powered", "locD" ],
+    [ "powered", "locE" ],
+    [ "clear", "locA" ],
+    [ "clear", "locB" ],
+    [ "clear", "locC" ],
+    [ "clear", "locD" ],
+    [ "clear", "locE" ],
+    [ "arm-empty" ],
+    [ "robot-at", "locB" ]
+  ],
+	"goal": [
+		[ "lit", "oBulb" ],
+		[ "has-color", "oMug", "red" ],
+		[ "has-color", "oMug2", "blue" ],
+		[ "on", "oBox", "oCrate" ],
+		[ "at", "oCrate", "locE" ],
+		[ "at", "oCrate2", "locB" ]
+	]
+}

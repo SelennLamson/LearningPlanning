@@ -34,7 +34,9 @@
 		"test_domain_every": 30,
 		"test_only_when_knowledge_modified": true,
 		"always_generalize_constants": false,
-		"use_bayesian_explorer": false
+		"use_bayesian_explorer": false,
+		"least_general": false,
+		"generalization_trials": 1
 	},
 
 	"bayesian_explorer": {

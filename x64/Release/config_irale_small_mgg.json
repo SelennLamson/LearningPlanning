@@ -23,7 +23,7 @@
 		"performtests": true,
 		"testproblem": "colorblocksworld_inst1",
 		"testfile": "generated_traces_400pa_colorblocksworld.json",
-		"planningproblems": 20
+		"planningproblems": 40
 	},
 
 	"irale": {
@@ -36,7 +36,7 @@
 		"always_generalize_constants": false,
 		"use_bayesian_explorer": false,
 		"least_general": false,
-		"generalization_trials": 50
+		"generalization_trials": 5
 	},
 
 	"bayesian_explorer": {

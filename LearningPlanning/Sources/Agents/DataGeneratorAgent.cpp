@@ -14,8 +14,8 @@
 
 #include "Logic/LogicEngine.h"
 
-#define SAMPLES_PER_ACTION 100
-#define PROBLEMS 20
+#define SAMPLES_PER_ACTION 400
+#define PROBLEMS 40
 #define MAX_PLAN_SIZE 4
 
 void DataGeneratorAgent::init(shared_ptr<Domain> inDomain, vector<Term> inInstances, Goal inGoal, shared_ptr<vector<Trace>> inTrace) {

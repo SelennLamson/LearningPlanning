@@ -23,7 +23,7 @@
 		"performtests": true,
 		"testproblem": "colorblocksworld_inst1",
 		"testfile": "generated_traces_400pa_colorblocksworld.json",
-		"planningproblems": 20
+		"planningproblems": 40
 	},
 
 	"irale": {
@@ -47,8 +47,8 @@
 		"estimated_rules_per_action": 2,
 		"exploration_time_limit": 2.0,
 
-		"random_plans": 10,
-		"random_experiments": 10,
+		"random_plans": 5,
+		"random_experiments": 20,
 		"random_action_trials": 50,
 		"plan_depth": 3,
 
@@ -62,8 +62,8 @@
 		"base_reset_prob": 0.2,
 		"fact_removal_discount": 1.0,
 
-		"random_discount": 0.95,
-		"focus_specific_rules": 0.1,
+		"random_discount": 0.9,
+		"focus_specific_rules": 0.0,
 
 		"save_motivation_trace": false,
 		"motivation_trace_file_name": "trace_motivation"

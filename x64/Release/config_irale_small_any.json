@@ -23,7 +23,7 @@
 		"performtests": true,
 		"testproblem": "colorblocksworld_inst1",
 		"testfile": "generated_traces_400pa_colorblocksworld.json",
-		"planningproblems": 20
+		"planningproblems": 40
 	},
 
 	"irale": {
